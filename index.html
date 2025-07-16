@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mateus Scherer Teles - Portfólio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in {
+      animation: fade-in 1s ease-out;
+    }
+
+    body {
+      background-color: #f3f4f6;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .name {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #b91c1c; /* Vermelho */
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #4b5563; /* Cinza escuro */
+    }
+
+    .btn-continuar {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #b91c1c;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border: none;
+    }
+
+    .btn-continuar:hover {
+      background-color: #9b1c1c;
+    }
+
+    .section-content {
+      display: none;
+    }
+
+    .section-visible {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Primeira camada (Tela inicial) -->
+  <div id="primeira-camada" class="content">
+    <div class="name">Mateus Scherer Teles</div>
+    <div class="subtitle mt-4">Estudante de Análise e Desenvolvimento de Sistemas</div>
+    <button class="btn-continuar" onclick="mostrarProximaCamada()">Continuar</button>
+  </div>
+
+  <!-- Segunda camada (Conteúdo do Portfólio) -->
+  <div id="segunda-camada" class="section-content">
+    <!-- Header -->
+    <header class="bg-red-700 text-white p-6 shadow-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold">Mateus Scherer Teles</h1>
+        <nav class="space-x-4 text-sm">
+          <a href="#sobre" class="hover:underline">Sobre</a>
+          <a href="#habilidades" class="hover:underline">Habilidades</a>
+          <a href="#projetos" class="hover:underline">Projeto Principal</a>
+          <a href="#contato" class="hover:underline">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Botão voltar -->
+    <div class="max-w-6xl mx-auto p-4">
+      <button onclick="voltarInicio()" class="btn-continuar bg-gray-700 hover:bg-gray-900">
+        &larr; Voltar para início
+      </button>
+    </div>
+
+    <main class="max-w-6xl mx-auto p-6 space-y-24">
+      <!-- Sobre -->
+      <section id="sobre" class="pt-16 animate-fade-in">
+        <h2 class="text-3xl font-bold mb-4 text-red-700">Sobre Mim</h2>
+        <p class="text-lg leading-relaxed">
+          Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por programação e desenvolvimento de software. Tenho ótima comunicação, sei trabalhar muito bem em grupo e 
+          tenho experiência em Java, HTML, CSS, MySQL e outras tecnologias. Gosto de transformar ideias em soluções práticas e funcionais.
+          Estou em busca da minha primeira oportunidade profissional na área de tecnologia para aplicar meus conhecimentos e crescer como desenvolvedor.
+        </p>
+        </p>
+        <p class="mt-4 text-lg leading-relaxed">
+          Tenho inglês no nível intermediário, o que me ajuda a compreender documentação técnica e comunicar-me em ambientes internacionais.
+        </p>
+      </section>
+
+      <!-- Habilidades -->
+      <section id="habilidades">
+        <h2 class="text-3xl font-bold mb-6 text-red-700">Habilidades Técnicas</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">Java</div>
+          <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">Git / GitHub</div>
+          <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">Versionamento com Git</div>
+          <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">HTML</div>
+          <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">CSS</div>
+          <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">MySQL</div>
+          <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">PHP</div>
+          <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">VS Code</div>
+          <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">Inglês (Intermediário)</div>
+        </div>
+      </section>
+
+      <!-- Projeto Principal -->
+      <section id="projetos">
+        <h2 class="text-3xl font-bold mb-6 text-red-700">Projeto Principal</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow card-hover">
+            <h3 class="text-xl font-semibold mb-2">RHControl – Sistema de Gestão de RH</h3>
+            <p class="mb-4">Sistema completo para cadastro, listagem, reajuste e exclusão de funcionários, com interface web moderna.</p>
+            <a href="https://mateus-scherer.github.io/Gerstor-de-RH-/" class="text-red-600 hover:underline" target="_blank" rel="noopener noreferrer">Abrir no navegador</a> |
+            <a href="https://github.com/Mateus-Scherer/Gerstor-de-RH-" class="text-red-600 hover:underline" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato">
+        <h2 class="text-3xl font-bold mb-6 text-red-700">Contato</h2>
+        <ul class="space-y-2 text-lg">
+          <li><strong>Email:</strong> <a href="mailto:mateusschererteles2020@gmail.com" class="text-red-600 hover:underline">mateusschererteles2020@gmail.com</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/mateus87634433" target="_blank" class="text-red-600 hover:underline" rel="noopener noreferrer">github.com/mateus87634433</a></li>
+          <li><strong>Telefone:</strong> (51) 93300-2830</li>
+          <li><strong>Cidade:</strong> São Leopoldo - RS</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-700 text-white text-center py-6 mt-16">
+      &copy; 2025 Mateus Scherer Teles. Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <script>
+    function mostrarProximaCamada() {
+      document.getElementById('primeira-camada').classList.add('hidden');
+      document.getElementById('segunda-camada').classList.add('section-visible');
+    }
+    function voltarInicio() {
+      document.getElementById('segunda-camada').classList.remove('section-visible');
+      document.getElementById('primeira-camada').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
