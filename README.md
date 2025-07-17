@@ -22,13 +22,13 @@ Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por programa
 **RHControl – Sistema de Gestão de RH**  
 Sistema completo para cadastro, listagem, reajuste e exclusão de funcionários, com interface web moderna.
 
-- [Abrir no navegador](https://mateus-scherer.github.io/Gerstor-de-RH-/)
-- [Ver no GitHub](https://github.com/Mateus-Scherer/Gerstor-de-RH-)
+- [Abrir no navegador](https://mateus-scherer.github.io/Gestor-de-RH-/)
+- [Ver no GitHub](https://github.com/Mateus-Scherer/Gestor-de-RH-)
 
 ## Contato
 
 - Email: mateusschererteles2020@gmail.com  
-- GitHub: [github.com/mateus87634433](https://github.com/mateus87634433)  
+- GitHub: [github.com/mateus87634433](https://github.com/Mateus-Scherer?tab=repositories)  
 - Telefone: (51) 93300-2830  
 - Cidade: São Leopoldo - RS
 
